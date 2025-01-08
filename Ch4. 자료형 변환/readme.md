@@ -18,17 +18,17 @@
 ```
 > 예시<br>
 ```
-byte bytevar = 100;											// 변수초기화
-int intvar = bytevar;										// 자동 형 변환
+byte bytevar = 100;						// 변수초기화
+int intvar = bytevar;						// 자동 형 변환
 System.out.println("intvar : " + intvar);					
 		
-long longvar = intvar;										// 자동 형 변환
+long longvar = intvar;						// 자동 형 변환
 System.out.println("longvar :" + longvar);					
 		
-float floatvar = longvar;									// 자동 형 변환
+float floatvar = longvar;					// 자동 형 변환
 System.out.println("floatvar :" + floatvar);				
 		
-double doublevar = floatvar;								// 자동 형 변환(주의), 정수형 자료형 --> 실수형 자료형
+double doublevar = floatvar;					// 자동 형 변환(주의), 정수형 자료형 --> 실수형 자료형
 System.out.println("doublevar :" + doublevar);
 ```
 ---
@@ -47,19 +47,19 @@ char  : 0 ~ 65535
 > 예시<br>
 ```
 1. 데이터 손실의 예시
-int num = 128;										// 00000000 00000000 00000000 10000000
-byte ch = (byte) num; 						// 10000000  		-> 음수를 지원하는 1 byte에서는 앞에 비트가 부호비트
-																	// -128				== 데이터 손실(128을 넣었는데. -128이 담겨있음)
+int num = 128;					// 00000000 00000000 00000000 10000000
+byte ch = (byte) num; 				// 10000000  	-> 음수를 지원하는 1 byte에서는 앞에 비트가 부호비트
+                                                // -128	== 데이터 손실(128을 넣었는데. -128이 담겨있음)
 
 2. 데어터 손실 X의 예
-int num1 = 127;										// 00000000 00000000 00000000 01111111
-byte ch1 = (byte) num;						// 01111111
-    															//	127			== 데이터 손실이 X (127을 넣었는데, 127이 담겨있음)
+int num1 = 127;					// 00000000 00000000 00000000 01111111
+byte ch1 = (byte) num;				// 01111111
+						// 127 == 데이터 손실이 X (127을 넣었는데, 127이 담겨있음)
 		
 3. 소수점 이하 데이터 소실 !!
 double number2 = 3.14;
-int num3 = (int) number2;					// 3.14  X ==> 3
-																	// 데이터 손실!!
+int num3 = (int) number2;			// 3.14  X ==> 3
+						// 데이터 손실!!
 ```
 
 
