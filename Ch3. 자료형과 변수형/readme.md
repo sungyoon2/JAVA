@@ -11,9 +11,9 @@
 상수란?		: 항상 같은 수, 값을 바꾸지 않음(고정)
 		
 " = " 은 우리가 알건 수학적 기호의 의미 즉, "같다"는 의미를 지니는게 아니라 "대입"의 의미를 지님.
-						왼쪽				= 				오른쪽
-						(공간)			=				(값, 수)
-					(Variable)		= 				(Value)
+					왼쪽		= 	오른쪽
+					(공간)		=	(값, 수)
+					(Variable)	= 	(Value)
 이 때, 오른쪽을 먼저 처리한다. => 선처리 후 저장의 형태
 ```
 ---
@@ -21,12 +21,12 @@
 ---
 > 정수 자료형<br>
 ```
-1. int					: 4byte 정수, 기본자료형
-2. byte				  : 1byte 정수, 부호 o
+1. int		  : 4byte 정수, 기본자료형
+2. byte		  : 1byte 정수, 부호 o
 3) short vs char 비교
-		char				: 2byte 정수 부호 x, 단일문자 저장용으로 주로 사용
-		short				: 2byte 정수 부호 o
-4) long			  	: 8byte 정수
+   char		  : 2byte 정수 부호 x, 단일문자 저장용으로 주로 사용
+   short	  : 2byte 정수 부호 o
+4) long		  : 8byte 정수
 ```
 > 실수 자료형<br>
 ```
@@ -55,8 +55,8 @@ char : 2byte 문자 저장 자료형
 > 논리형 자료형<br>
 ```
 boolean : 1 byte
-		      ture (참)
-		      false (거짓)
+           ture (참)
+           false (거짓)
 ```
 
 
