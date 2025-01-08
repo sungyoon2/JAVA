@@ -1,2 +1,2 @@
 # JAVA
-JAVA Prac
+JAVA Bacis Study
