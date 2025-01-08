@@ -13,8 +13,8 @@
 ---
 > 기본<br>
 ```
-1. System.out 					: 표준 출력 스트림 생성 - 모니터
-2. System.in					: 표준 입력 스트림 생성 - 키보드
+1. System.out 	 : 표준 출력 스트림 생성 - 모니터
+2. System.in	 : 표준 입력 스트림 생성 - 키보드
 ```
 > 실수<br>
 ```
@@ -46,8 +46,8 @@ nextLine()
 
  <입력된 변수 받기>  
 String s = sc.next(); 		// next() : 한 문자열(단어), 띄워쓰기 기준으로 한 문자열 만 가능
-													// nextLint() : 한 줄
-													// nextInt()  : 숫자로 나옴. 대신 변수 앞에 String이 아니라 int로 바꿔야함
+                                // nextLint() : 한 줄
+				// nextInt()  : 숫자로 나옴. 대신 변수 앞에 String이 아니라 int로 바꿔야함
 ```
 		
 > Scanner 버퍼비우기<br>
@@ -57,7 +57,7 @@ String str = sc.nextLine();
 System.out.print("수 입력 : ");
 int num = sc.nextInt();
 		
-sc.nextLine(); 											// 버퍼공간에 남아 있는 데이터값을 초기화함으로써 str에 문자열을 다시 받을수 있도록 함
+sc.nextLine(); 		// 버퍼공간에 남아 있는 데이터값을 초기화함으로써 str에 문자열을 다시 받을수 있도록 함
 		
 System.out.print("문자열 입력 (띄워쓰기 포함 문자열) : ");
 String str = sc.nextLine();
