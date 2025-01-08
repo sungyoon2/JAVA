@@ -1,4 +1,4 @@
-# Ch.8 분기문(switch문)
+# Ch8. 분기문(switch문)
 ---
 switch문 (다중 분기)
 ---
