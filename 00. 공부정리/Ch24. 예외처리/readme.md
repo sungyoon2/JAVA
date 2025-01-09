@@ -107,5 +107,52 @@ try {
 - Checked Exception(컴파일 타임 예외)은 반드시 예외 처리를 해주어야하는 것이 특징임.
 ```
 
+>  ### throw keyword <br>
+- 자바에서 예외를 명시적으로 발생시키기 위한 키워드
+- throw 키워드를 사용하여 특정 예외를 강제로 발생시킬 수 있음
+```
+< 기본 구문 >
+throw 예외객체;
+throw new ArrayIndexOutOfBoundsException();
+// "예외 객체"는 특정 예외 클래스의 인스턴스임.
 
-	
+< 예외 처리는 주로 두 가지 방식으로 나눌 수 있음 >
+1. 예외의 직접적인 던지기 (Direct throwing) : 메소드 내에서 예외 조건을 발견했을 때, 해당 예외를 직접 던지는 방식
+2. 메소드에게 예외를 떠 넘기기 (rethrowing) : 메소드에서 예외를 처리하지 않고, 해당 예외를 다시 호출한 메소드로 떠넘기는 방식
+-> 이는 주로 예외를 발생한 메소드가 예외를 해결할 수 없는 경우에 사용
+
+< 예제 >
+1. 직접 던지기 Example
+public static void main(String[] args) {
+	try {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("양수를 하나 입력하세요>>>");
+		int value = sc.nextInt(); 			// value라는 변수에 입력값을 저장
+		if (value < 0) {
+		*여기에서 throw문을 사용하여 IllegalArgumentException을 명시적으로 던짐(예외 발생)*
+			throw new IllegalArgumentException("음수는 허용되지 않습니다.");   
+			}
+			System.out.println("값 : " + value);
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+
+2. 메소드에게 예외를 떠넘기기
+public static void someMethod() throws CustomException {
+try {
+	// 예외 발생 가능성 있는 코드
+	int result = 10 / 0;			// ArithmeticException 발생				} catch (ArithmeticException e) {
+	* ArithmeticException 예외에 해당하는 예외가 발생했을 때 실행되는 코드 *
+	System.out.println("Exception caught in someMethod : " + e.getMessage());
+	* 예외를 다시 던짐. (CustomException 예외 발생) *
+	throw new CustomException("CustomException ", e);
+}
+public static void main(String[] args) throws CustomException {
+		someMethod();
+* 예외를 떠넘기는 메소드가 throws를 사용하여 예외를 선언했다고 해도, 해당 메소드를 호출한 곳에서 반드시 예외를 처리할 필요는 없음.
+* 메소드를 호출한 속에서 예외를 처리하지 않으면, 예외는 호출 스택을 따라 더 상위의 메소드로 전파됨.
+* 최종적으로는 예외가 처리되지 않은 채로 프로그램이 종료될 수 있음.
+* 예외를 상위로 떠넘기다 == 예외가 발생한 메소드에서 예외를 처리하지 않고, 호출한 상위 메소드로 예외를 전파시키는 것
+* 호출 스택(call stack)을 따라서 예외가 전파되어 나가게 됨.
+}
+```
