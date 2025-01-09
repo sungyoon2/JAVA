@@ -32,7 +32,7 @@ public class C04PersonMain {
 	String name;
 	int age;
 
-  // 생성자(Constructor)
+  	// 생성자(Constructor)
 	public C04PersonMain() {
 		System.out.println("default 생성자입니다 !!!");
 	 }
