@@ -1,4 +1,4 @@
-Ch25. Outputstream & Inputstream
+Ch26. Outputstream & Inputstream
 ---
 - OutputStream 및 InputStream은 바이트 단위로 데이터를 처리
 - 이는 주로 이미지, 동영상, 사운드 파일 등 이진 데이터를 다룰 때 사용
