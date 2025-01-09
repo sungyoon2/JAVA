@@ -36,7 +36,7 @@ public class C04PersonMain {
 	public C04PersonMain() {
 		System.out.println("default 생성자입니다 !!!");
 	 }
-  public C04PersonMain(String name, int age) {
+	public C04PersonMain(String name, int age) {
 		System.out.println("매개변수 생성자입니다");
 		this.name = name;
 		this.age = age;
