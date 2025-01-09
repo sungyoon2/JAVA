@@ -4,7 +4,7 @@ JAVA Bacis Study
 INDEX
 ---
 |-|-|
-|-|-|-|
+|-|-|
 |Ch1. 개요|[바로가기](./00. 공부정리/Ch1. 개요)|
 |OSI LAYER|[바로가기](./DOCUMENT/02)|
 |케이블링|[바로가기](./DOCUMENT/03)|
