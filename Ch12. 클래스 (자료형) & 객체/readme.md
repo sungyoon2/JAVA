@@ -61,6 +61,7 @@ Getter and Setter
 ```
 Getter : private 속성 값 """ 읽기 """"
        : 대개, private속성 이름 앞에 ''get''이라는 키워드를 붙여 메서드 이름을 지정 == get속성이름()
+
 <사용하기 위해서 선행되어야 하는 구조>
 public int getPrivateField() {
 		return privateField;
@@ -70,6 +71,7 @@ public int getPrivateField() {
 ```
 Setter : private 속성 값 """ 설정 """
        : 대개, private속성 이름 앞에 ''set''이라는 키워드를 붙여 메서드 이름을 지정 == set속성이름()
+
 <사용하기 위해서 선행되어야 하는 구조>
 public void setPrivateField(int privateField) {
 		this.privateField = privateField;
