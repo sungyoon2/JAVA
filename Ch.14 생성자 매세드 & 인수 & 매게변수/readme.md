@@ -48,11 +48,11 @@ public class C04PersonMain {
 	}
 	public static void main(String[] args) {
 		//Person 클래스의 인스턴스 생성
-		C04PersonMain person1 = new C04PersonMain("John", 25);					// 매개변수 생성자에 인수 두개 전달
+		C04PersonMain person1 = new C04PersonMain("John", 25);		// 매개변수 생성자에 인수 두개 전달
 		
 		// 속성 값 할당 및 출력
 		person1.name = "Jane";
-		person1.age = 30;														// 강제로 값을 다시 지정함
+		person1.age = 30;						// 강제로 값을 다시 지정함
 		
 		System.out.println("이름 : " + person1.name);
 		System.out.println("나이 : " + person1.age);
