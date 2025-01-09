@@ -81,8 +81,10 @@ public void setPrivateField(int privateField) {
 > 정의<br>
 - 클래스 내에서 사용되는 예약어
 - 생성되는 객체의 위치정보를 가져오는데 사용됨.
+---
 > 사용되는 데<br>	
 - 멤버변수 vs 매개변수 구별
+---
 > 형식<br>
 - this.name = name
 
