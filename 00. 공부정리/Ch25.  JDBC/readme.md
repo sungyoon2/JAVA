@@ -8,19 +8,19 @@ JDBC를 사용하기 위해선 import java.sql.Connection; 이 선행 필수
 public class Connect {
 	public static void main(String[] args) {
 		// 연결관련 정보 저장용 변수
-		String id = "root";						            // DB연결 ID
+		String id = "root";					// DB연결 ID
 		String pwd = "1234";					// DB연결 PWD
-		String url = "jdbc:mysql://localhost:3306/testdb";					// 연결 URL
+		String url = "jdbc:mysql://localhost:3306/testdb";	// 연결 URL
 		
 		// DB연결 객체 관련 참조 변수
 		Connection conn = null;					// DB연결객체용 참조변수
-		PreparedStatement pstmt = null;			// SQL쿼리 전송객체용 참조변수
+		PreparedStatement pstmt = null;			        // SQL쿼리 전송객체용 참조변수
 		ResultSet rs = null;					// 쿼리결과(Select결과) 수신용 참조변수
 		// 연결하기
 		try {
-			class.forName("com.mysql.cj.jdbc.Driver");			// DB 드라이버 로드
+			class.forName("com.mysql.cj.jdbc.Driver");	// DB 드라이버 로드
 			System.out.println("Driver loading Success!!!");
-			conn = DriverManager.getConnection(url, id, pwd);	// DB Connection 객체 받기
+			conn = DriverManager.getConnection(url, id, pwd);// DB Connection 객체 받기
 			System.out.println("DB Connected ---");
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -35,17 +35,17 @@ public class Connect {
 public class INSERT {
 	public static void main(String[] args) {
 		// 연결관련 정보 저장용 변수
-		String id = "root";						// DB연결 ID
+		String id = "root";					// DB연결 ID
 		String pwd = "1234";					// DB연결 PWD
-		String url = "jdbc:mysql://localhost:3306/testdb";					// 연결 URL
-    // DB연결 객체 관련 참조 변수
+		String url = "jdbc:mysql://localhost:3306/testdb";	// 연결 URL
+		// DB연결 객체 관련 참조 변수
 		Connection conn = null;					// DB연결객체용 참조변수
-		PreparedStatement pstmt = null;			// SQL쿼리 전송객체용 참조변수
+		PreparedStatement pstmt = null;				// SQL쿼리 전송객체용 참조변수
 		ResultSet rs = null;					// 쿼리결과(Select결과) 수신용 참조변수		
-		<데이터베이스 구문>
-    1. 데이터베이스 생성
+	<데이터베이스 구문>
+    	1. 데이터베이스 생성
 		CREATE SCHEMA testdb;
-    2. 테이블 생성
+    	2. 테이블 생성
 		CREATE TABLE testdb.tbl_customer (
 				idx INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 				name VARCHAR(30) NOT NULL,
@@ -53,11 +53,11 @@ public class INSERT {
 				address VARCHAR(30) NOT NULL
 				);
 		
-    3. 연결하기 및 데이터 삽입
+   	 3. 연결하기 및 데이터 삽입
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");			// DB 드라이버 로드
 			System.out.println("Driver Loading Success!!!")
-			conn = DriverManager.getConnection(url, id, pwd);	// DB Connection 객체 받기
+			conn = DriverManager.getConnection(url, id, pwd);		// DB Connection 객체 받기
 			System.out.println("DB Connected - - -");
 			pstmt = conn.prepareStatement("INSERT INTO testdb.tbl_customer VALUES(?, ?, ?, ?)");
 			pstmt.setInt(1, 3);
@@ -90,19 +90,19 @@ public class INSERT {
 public class DELETE {
 	public static void main(String[] args) {
 		// 연결관련 정보 저장용 변수
-		String id = "root";						// DB연결 ID
+		String id = "root";					// DB연결 ID
 		String pwd = "1234";					// DB연결 PWD
-		String url = "jdbc:mysql://localhost:3306/testdb";					// 연결 URL
+		String url = "jdbc:mysql://localhost:3306/testdb";	// 연결 URL
 		
 		// DB연결 객체 관련 참조 변수
 		Connection conn = null;					// DB연결객체용 참조변수
-		PreparedStatement pstmt = null;			// SQL쿼리 전송객체용 참조변수
+		PreparedStatement pstmt = null;				// SQL쿼리 전송객체용 참조변수
 		ResultSet rs = null;					// 쿼리결과(Select결과) 수신용 참조변수
-		 1. 연결하기 및 데이터 삭제
+	1. 연결하기 및 데이터 삭제
 		try {
-			class.forName("com.mysql.cj.jdbc.Driver");			// DB 드라이버 로드
+			class.forName("com.mysql.cj.jdbc.Driver");	// DB 드라이버 로드
 			System.out.println("Driver loading Success!!!");
-			conn = DriverManager.getConnection(url, id, pwd);	// DB Connection 객체 받기
+			conn = DriverManager.getConnection(url, id, pwd);// DB Connection 객체 받기
 			System.out.println("DB Connected ---");
 			
 			pstmt = conn.prepareStatement("DELETE FROM testdb.tbl_customer WHERE idx=?");
@@ -113,7 +113,7 @@ public class DELETE {
 			} else {
 				System.out.println("DELETE 실패");
 			}
-    2. 데이터 조회
+	2. 데이터 조회
 			SELECT * FROM testdb.tbl_customer;
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -130,19 +130,19 @@ public class DELETE {
 public class UPDATE {
 	public static void main(String[] args) {
 		// 연결관련 정보 저장용 변수
-		String id = "root";						// DB연결 ID
+		String id = "root";					// DB연결 ID
 		String pwd = "1234";					// DB연결 PWD
-		String url = "jdbc:mysql://localhost:3306/testdb";					// 연결 URL
+		String url = "jdbc:mysql://localhost:3306/testdb";	// 연결 URL
 		
 		// DB연결 객체 관련 참조 변수
 		Connection conn = null;					// DB연결객체용 참조변수
-		PreparedStatement pstmt = null;			// SQL쿼리 전송객체용 참조변수
+		PreparedStatement pstmt = null;				// SQL쿼리 전송객체용 참조변수
 		ResultSet rs = null;					// 쿼리결과(Select결과) 수신용 참조변수
-		1. 연결하기 및 데이터 업데이트
+	1. 연결하기 및 데이터 업데이트
 		try {
-			class.forName("com.mysql.cj.jdbc.Driver");			// DB 드라이버 로드
+			class.forName("com.mysql.cj.jdbc.Driver");	// DB 드라이버 로드
 			System.out.println("Driver loading Success!!!");
-			conn = DriverManager.getConnection(url, id, pwd);	// DB Connection 객체 받기
+			conn = DriverManager.getConnection(url, id, pwd);// DB Connection 객체 받기
 			System.out.println("DB Connected ---");
 			
 			pstmt = conn.prepareStatement("UPDATE FROM testdb.tbl_customer set address =? WHERE idx=?");
@@ -156,7 +156,7 @@ public class UPDATE {
 			} else {
 				System.out.println("UPDATE 실패");
 			}
-    2. 데이터 조회
+	2. 데이터 조회
 			SELECT * FROM testdb.tbl_customer;
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -173,26 +173,26 @@ public class UPDATE {
 public class C05SELECT {
 	public static void main(String[] args) {
 		// 연결관련 정보 저장용 변수
-		String id = "root";						// DB연결 ID
+		String id = "root";					// DB연결 ID
 		String pwd = "1234";					// DB연결 PWD
-		String url = "jdbc:mysql://localhost:3306/testdb";					// 연결 URL
+		String url = "jdbc:mysql://localhost:3306/testdb";	// 연결 URL
 		
 		// DB연결 객체 관련 참조 변수
 		Connection conn = null;					// DB연결객체용 참조변수
-		PreparedStatement pstmt = null;			// SQL쿼리 전송객체용 참조변수
+		PreparedStatement pstmt = null;				// SQL쿼리 전송객체용 참조변수
 		ResultSet rs = null;					// 쿼리결과(Select결과) 수신용 참조변수
-		1. 연결하기 및 데이터 조회
+	1. 연결하기 및 데이터 조회
 		try {
-			class.forName("com.mysql.cj.jdbc.Driver");			// DB 드라이버 로드
+			class.forName("com.mysql.cj.jdbc.Driver");	// DB 드라이버 로드
 			System.out.println("Driver loading Success!!!");
-			conn = DriverManager.getConnection(url, id, pwd);	// DB Connection 객체 받기
+			conn = DriverManager.getConnection(url, id, pwd);// DB Connection 객체 받기
 			System.out.println("DB Connected ---");
 			
 			pstmt = conn.prepareStatement("SELECT * FROM testdb.tbl_customer");
 			
 			rs = pstmt.executeQuery();
 			if (rs != null) {
-				** 조회한 결과값이 있다면 **
+			** 조회한 결과값이 있다면 **
 				 while(rs.next()) {
 					System.out.println(rs.getString("idx") + " "); 
 					System.out.println(rs.getString("name") + " "); 
@@ -202,7 +202,7 @@ public class C05SELECT {
 			} else {
 				System.out.println("UPDATE 실패");
 			}
-    2. 데이터 조회
+	2. 데이터 조회
 			SELECT * FROM testdb.tbl_customer;
 		} catch(Exception e) {
 			e.printStackTrace();
