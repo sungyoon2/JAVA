@@ -52,3 +52,37 @@ String address;			// 주소를 담아줄 멤버변수
 > 객체 지향 프로그래밍(Object Oriented Programming, OOP)<br>
 - 객체 (Object)에 대한 모델링을 중심으로 하는 프로그래밍 방식
 - 코드를 객체라는 단위를 구성, 객체들 간의 상호 작용을 통해 프로그램을 구축하는 것을 목표
+---
+Getter and Setter
+---
+> 정의<br>
+- 객체 지향 프로그래밍에서 클래스의 속성(멤버 변수)에 접근하거나 값을 설정하기 위한 메서드
+> Getter() 메서드 ( == 접근자 메서드)<br>
+```
+Getter : private 속성 값 """ 읽기 """"
+       : 대개, private속성 이름 앞에 ''get''이라는 키워드를 붙여 메서드 이름을 지정 == get속성이름()
+<사용하기 위해서 선행되어야 하는 구조>
+public int getPrivateField() {
+		return privateField;
+}
+```	
+> Setter() 메서드<br>
+```
+Setter : private 속성 값 """ 설정 """
+       : 대개, private속성 이름 앞에 ''set''이라는 키워드를 붙여 메서드 이름을 지정 == set속성이름()
+<사용하기 위해서 선행되어야 하는 구조>
+public void setPrivateField(int privateField) {
+		this.privateField = privateField;
+}
+```
+---
+'''This''' keyword
+---
+> 정의<br>
+- 클래스 내에서 사용되는 예약어
+- 생성되는 객체의 위치정보를 가져오는데 사용됨.
+> 사용되는 데<br>	
+- 멤버변수 vs 매개변수 구별
+> 형식<br>
+- this.name = name
+
