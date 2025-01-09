@@ -71,7 +71,7 @@ public class INSERT {
 			} else {
 				System.out.println("INSERT 실패");
 			}
-    4. 데이터 조회
+	4. 데이터 조회
 			SELECT * FROM testdb.tbl_customer;
 			
 		} catch(Exception e) {
