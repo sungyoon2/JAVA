@@ -27,10 +27,10 @@ class LocalVar {
 	void Func1() {
 		System.out.println("멤버변수 num = " + num);
 		if (true) {
-			int num = 100; 							// if문 안에서만 사용되는 지역변수 num
-			System.out.println("if문 안의 지역변수 num = " + num);					//num는 지역변수에 의해 100이 출력됨
+			int num = 100; 						// if문 안에서만 사용되는 지역변수 num
+			System.out.println("if문 안의 지역변수 num = " + num);	//num는 지역변수에 의해 100이 출력됨
 		}
-		System.out.println("멤버변수 num = " + num);								// num는 지역변구의 영향을 받지아니하고 멤버변수인 10이 출력
+		System.out.println("멤버변수 num = " + num);			// num는 지역변구의 영향을 받지아니하고 멤버변수인 10이 출력
 	}
 	
 	void Func2() {
