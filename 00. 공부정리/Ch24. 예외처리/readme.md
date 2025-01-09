@@ -69,4 +69,31 @@ public class EX {
 				System.out.println("Undefined");
 			}
 		}
+```
+> 예외 처리시 사용 명령어<br>
+```
+1. getCause() : 원인 가져오기
+2. toString() : 예외객체 정보
+3. getStackTrace() : 예외객체 식별주소
+4. printStackTrace() : 예외발생정보 출력
+5. getMessage() : 예외 메세지 내용 출력
+```
+> 예외처리 예시(NullPointerException)<br>
+```
+try {
+	String str = null;	
+	System.out.println(str.toString());	// 없는 문자열을 toString()으로 출력시도 ==> 예외 발생
+} catch(Exception e) {
+// e == 참조변수
+// 에외 객체가 생성되고 주소번지가 100이라면 try에서 예외가 발생한 후 catch의 참조변수 e가 그 주소번지를 받음
+	System.out.println("포인터(참조변수)가 null 참조하고 있습니다.");
+	System.out.println(e.getCause());			// getCause() : 원인 가져오기
+	System.out.println(e.toString());			// toString() : 예외객체 정보
+	System.out.println(e.getStackTrace());			// getStackTrace() : 예외객체 식별주소
+	e.printStackTrace();					// printStackTrace() : 예외발생정보 출력
+	System.out.println(e.getMessage());			// getMessage() : 예외 메세지 내용 출력
+}
+```
+
+
 	
