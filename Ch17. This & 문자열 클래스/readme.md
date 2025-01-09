@@ -46,3 +46,24 @@ Parameter(int x) Constructor END
 Parameter(int x, int y) Constructor START
 Parameter(int x, int y) Constructor END
 ```
+---
+문자열 클래스 (== String Class)에서의 다양한 메서드
+---
+> 종류<br>
+```
+length()         : 문자열의 길이
+charAt(X)        : X번째의 문자	
+toUpperCase()    : 대문자로 변환
+toLowerCase()    : 소문자로 변환
+replace('X','Y') : X를 Y로 변환
+trim()   	 : 반복실행
+Substring()      : 문자열 자르기
+		   (2)	 -> 앞에서 두 문자 자르고 출력
+                   (0,2) -> 앞에서 두 문자외에 다 짤라내고 출력
+indexof("문자열") : 문자열의 index번호 확인
+                    해당문자열 X시 '-1' return    // 0부터 시작해서 0,1,2순으로 index번호가 매겨짐
+lastIndexOf("문자열") : 문자열의 index번호 확인
+			* 뒤에서부터 앞으로 검색
+contains("문자열") : 문자열 포함여부
+```
+		
