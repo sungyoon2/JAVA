@@ -8,9 +8,9 @@
 ---
 > 메서드의 헤더<br>
 ```
-public						void					printCarInfo				(	)					==> printCarInfo() 메서드는 매개변수X
-        	    접근 제어자					반환타입					메서드명						(매개변수)			
-              	    							반환 자료형
+public		  void		printCarInfo		(	)		==> printCarInfo() 메서드는 매개변수X
+접근 제어자	반환타입		메서드명			(매개변수)			
+                반환 자료형
 ```
 > 메서드의 바디(몸체)<br>
 - {}
@@ -19,17 +19,17 @@ public						void					printCarInfo				(	)					==> printCarInfo() 메서드는 매
 ---
 > 종류<br>
 ```
-1. public									: 어떤 클래스에서든 접근이 가능함.
-2. protected								: 동일한 패키지 내의 클래스에서만 접근 가능함. 접근 제어자를 지정하지 않은 경우 기본 사용
-3. default									: 동일한 패키지 내의 클래스에서만 접근 가능함, 접근 제어자를 지정하지 않은 경우 기본 사용
-4. private									: 동일한 클래스 내에서만 접근 가능함.
+1. public	: 어떤 클래스에서든 접근이 가능함.
+2. protected	: 동일한 패키지 내의 클래스에서만 접근 가능함. 접근 제어자를 지정하지 않은 경우 기본 사용
+3. default	: 동일한 패키지 내의 클래스에서만 접근 가능함, 접근 제어자를 지정하지 않은 경우 기본 사용
+4. private	: 동일한 클래스 내에서만 접근 가능함.
 ```
 > 종류별 특징<br>
 ```
-1. public									: 모든 클래스 O
-2. protected								: 동일 패키지 + 상속받은 하위 클래스
-3. default									: 동일 패키지
-4. private									: 현재 클래스
+1. public	: 모든 클래스 O
+2. protected	: 동일 패키지 + 상속받은 하위 클래스
+3. default	: 동일 패키지
+4. private	: 현재 클래스
 ```
 ---
 함수 호출
