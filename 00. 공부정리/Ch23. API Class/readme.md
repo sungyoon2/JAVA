@@ -17,7 +17,7 @@ EX)	데이터의 교환, 서비스의 호출, 라이브러리 함수의 사용 �
 ```
 1. java.lang 패키지	: 기본 데이터 유형, 예외 처리 등의 핵심 클래스 등
 2. java.util 패키지	: 컬렉션 프레임워크, 날짜 및 시간 관련 클래스 등
-3. java.io 패키지		: 입출력 작업을 위한 클래스
+3. java.io 패키지	: 입출력 작업을 위한 클래스
 4. java.net 패키지 	: 네트워크 프로그래밍을 위한 클래스
 5. javax.swing 패키지 	: GUI (그래픽 사용자 인터페이스)를 개발하기 위한 클래스
 ```
@@ -105,9 +105,9 @@ public class C03Wrapper {
 - java 8부터는 새로운 날짜 및 시간 API인 "java.time" 패키지의 LocalDate, LocalTime, LocalDateTime 등으로 대체됨.
 ```
 <사용법>
-Date d1 = new Date();			// 현재 날짜와 시간으로 Date 객체를 설정
+Date d1 = new Date();			        // 현재 날짜와 시간으로 Date 객체를 설정
 System.out.println(d1);											* get ~로 각각 원하는 해당 값을 들고오는 과정 *
-System.out.println(d1.getYear() + 1900 +  "년"); // getYear은 현년도-1900인 년도가 출력되므로 +1900을 해주어야 현재 연도가 출력됨
+System.out.println(d1.getYear() + 1900 +  "년");// getYear은 현년도-1900인 년도가 출력되므로 +1900을 해주어야 현재 연도가 출력됨
 System.out.println(d1.getMonth() + 1 + "월");	// getMonth는 0 - 11 까지의 값을 반환하므로 +1을 해주어야됨
 System.out.println(d1.getDay() + "일");		// getDay로 일만 ,  0 - 6까지의 값을 반환, 0 : 일요일
 System.out.println(d1.getHours() + "시간");						
