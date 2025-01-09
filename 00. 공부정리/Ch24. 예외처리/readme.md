@@ -65,7 +65,7 @@ public class EX {
 				int num = test = test / test1;
 				System.out.println(num);
 				
-			} catch (Exception e) {								// 정수가 아닌 수가 나올시에 예외 발생, 즉 에러가 발생하므로 이때 catch로 잡아서 Undefined가 출력되도록 설정
+			} catch (Exception e) {		// 정수가 아닌 수가 나올시에 예외 발생, 즉 에러가 발생하므로 이때 catch로 잡아서 Undefined가 출력되도록 설정
 				System.out.println("Undefined");
 			}
 		}
@@ -139,14 +139,15 @@ public static void main(String[] args) {
 
 2. 메소드에게 예외를 떠넘기기
 public static void someMethod() throws CustomException {
-try {
-	// 예외 발생 가능성 있는 코드
-	int result = 10 / 0;			// ArithmeticException 발생				} catch (ArithmeticException e) {
-	* ArithmeticException 예외에 해당하는 예외가 발생했을 때 실행되는 코드 *
-	System.out.println("Exception caught in someMethod : " + e.getMessage());
-	* 예외를 다시 던짐. (CustomException 예외 발생) *
-	throw new CustomException("CustomException ", e);
-}
+	try {
+		// 예외 발생 가능성 있는 코드
+		int result = 10 / 0;			// ArithmeticException 발생
+	} catch (ArithmeticException e) {
+		* ArithmeticException 예외에 해당하는 예외가 발생했을 때 실행되는 코드 *
+		System.out.println("Exception caught in someMethod : " + e.getMessage());
+		* 예외를 다시 던짐. (CustomException 예외 발생) *
+		throw new CustomException("CustomException ", e);
+	}
 public static void main(String[] args) throws CustomException {
 		someMethod();
 * 예외를 떠넘기는 메소드가 throws를 사용하여 예외를 선언했다고 해도, 해당 메소드를 호출한 곳에서 반드시 예외를 처리할 필요는 없음.
